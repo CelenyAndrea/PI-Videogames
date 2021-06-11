@@ -1,0 +1,57 @@
+.background{
+    overflow-y: hidden ! important;
+    overflow-x: hidden ! important;
+    background-color: #f8f8f8;
+    background-image: url('https://tecnotrono.com/wp-content/uploads/2020/05/top-20-mejores-videojuegos-del-2020.jpg');
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100%
+      } 
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+   
+}
+
+h1{
+    font-family:  'Montserrat', sans-serif;
+    font-size: 100px;
+    color: white;
+    margin-right: 120px
+}
+
+.enter{
+    font-family: 'Montserrat', sans-serif;
+    color: grey;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 5px;
+    border: solid 1px;
+    border-color: black;
+    width: 300px;
+    margin-right: 150px;
+    
+}
+#text{
+    font-family:  'Montserrat', sans-serif;
+    font-size: 30px;
+    color: grey !important;
+    text-decoration: none;
+}
+text:link {
+    text-decoration: none;
+  }
+h2{
+    font-family:  'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white !important;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: 300px;
+
+}

@@ -1,17 +1,17 @@
 .pagination {
-    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px ;
-    background-color: rgba(0, 0, 0, 0.108);
+    padding: 10px;
 }
 
 .pagination button{
     background: none;
     border: none;
-    color: white;
-    font-size: 18px;
+    color: #A0FFE6;
+    font-weight: 800;
+    font-size: 35px;
+    letter-spacing: 25px;
 }
 
 .item button:hover {

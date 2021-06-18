@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pagination.css';
+import style from './Pagination.module.css';
 
 export const Pagination = ({ videogamesPerPage, totalVideogames, paginate }) => {
   const pageNumbers = [];
@@ -10,9 +10,9 @@ export const Pagination = ({ videogamesPerPage, totalVideogames, paginate }) => 
   }
 
   return (
-    <nav className="pagination">
+    <nav className={style.pagination}>
         {pageNumbers.map((num) => (
-          <div key={num} className="item">
+          <div key={num} className={style.item}>
             <button onClick={(e) => paginate(e, num)}>
               {num}
             </button>

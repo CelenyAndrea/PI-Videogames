@@ -1,13 +1,13 @@
 import React from 'react';
 import Card from '../Card/Card';
-
+import style from './Videogame.module.css'
 
 export default function Videogames ({videogames}) {
   return (
-    <div key={videogames}>
+    <div className={style.show}>
       {videogames.length > 0 ?
-        videogames.map((data) => (<Card data={data} />))
-        : <img className="loading" src="https://www.seprelab.com/assets/img/loader.gif" alt="Link caido"/>
+          videogames.map((data) => (<Card data={data} />))
+        : <img src="https://www.seprelab.com/assets/img/loader.gif" alt="Link caido"/>
       }
     </div>
   );

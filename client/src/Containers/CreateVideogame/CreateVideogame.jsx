@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getGenres, createVideogame } from "../../Actions";
-
+import style from './CreateVideogame.module.css';
 
 function CreateVideogame() {
 
@@ -24,7 +24,7 @@ function CreateVideogame() {
     dispatch(getGenres())
   }, []);
 
-  const platformsRand = ["PC", "iOS", "Android", "macOS", "PlayStation", "PlayStation 2", "PlayStation 3", "PlayStation 4", "PlayStation 5", "PSP", "Xbox", "Xbox One", "Xbox 360", "PS Vita", "Nintendo Switch","Nintendo DS", "Wii", "Linux", "GameCube", "Nintendo 64", "Game Boy", "Apple", "Atari", "Genesis", "SEGA"]
+  const platformsRand = ["PC", "iOS", "Android", "macOS", "PlayStation", "Xbox", "Nintendo", "Linux", "Apple", "Atari", "Genesis", "SEGA"]
 
   const ChangeInput = (e) => {
     if (e.target.name === "genres" || e.target.name === "platforms") {
@@ -87,67 +87,67 @@ function CreateVideogame() {
   };
 
   return (
-    <div className="container">
+    <div className={style.container}>
       <h1>Create your Videogame!</h1>
         <form
-            id="survey-form"
-            className="form"
-            noValidate
-            onChange={(e) => ChangeInput(e)}
-            onSubmit={(e) => handleSubmit(e)}
-        >
-        <div>
-          <div className="divTitles">
-            <div>
-              <label>-Name-</label>
-                <input
-                  className="label"
+          id="survey-form"
+          className={style.form}
+          // noValidate
+          onChange={(e) => ChangeInput(e)}
+          onSubmit={(e) => handleSubmit(e)} >
+
+          <div className={style.imagediv}>
+            <label>Image URL</label>
+            <input
+              className={style.imagen}
+              type="text"
+              name="image"
+              value={game.image}
+            ></input>
+          </div>
+          <div>
+            <div className={style.divTitles}>
+              <div>
+                <label>Name</label>
+                  <input
+                  className={style.label}
                   type="text"
                   name="name"
                   value={game.name}
                 ></input>
-            </div>
-            <div>
-              <label>-Description-</label>
+              </div>
+              <div>
+                <label>Released</label>
                 <input
-                  className="label"
-                  type="text"
-                  name="description"
-                  value={game.description}
-                ></input>
-            </div>
-            <div>
-              <label>-Released-</label>
-                <input
-                  className="label"
+                  className={style.label}
                   type="date"
                   name="released"
                   value={game.released}
                 ></input>
-            </div>
-            <div>
-              <label>-Rating-</label>
+              </div>
+              <div>
+                <label>Rating</label>
                 <input
-                  className="label"
+                  className={style.label}
                   type="number"
                   name="rating"
-                  value={game.rating}
+                  value={ game.rating}
                 ></input>
-            </div>
-            <div className="imagediv">
-              <label>-Image URL-</label>
-                <input
-                  className="imagein"
+              </div>
+              <div>
+                <label>Description</label>
+                <textarea
+                  className={style.label}
                   type="text"
-                  name="image"
-                  value={game.image}
-                ></input>
+                  name="description"
+                  value={game.description}
+                ></textarea>
+              </div>
             </div>
-          </div>
-            <div className="checkboxs">
-              <div className="checks">
-                <label>-Genres-</label>
-                <div className="gendivs">
+            <div className={style.checkboxs}>
+              <div className={style.checks}>
+                <label>Genres</label>
+                <div className={style.gendivs}>
                   <div>
                     {genres1.map((gen) => (
                       <div key={gen.name}>
@@ -156,7 +156,7 @@ function CreateVideogame() {
                           name="genres"
                           value={gen.name}
                         ></input>
-                      <label name={gen}>{gen.name}</label>
+                        <label name={gen}>{gen.name}</label>
                       </div>
                     ))}
                   </div>
@@ -172,30 +172,30 @@ function CreateVideogame() {
                       </div>
                     ))}
                   </div>
+                </div>
+              </div>
+              <div className={style.checks}>
+                <label>Platforms</label>
+                <div>
+                  {platformsRand.map((P) => (
+                    <div key={P}>
+                      <input
+                        type="checkbox"
+                        name="platforms"
+                        value={P}
+                      ></input>
+                      <label name={P}>{P}</label>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="checks">
-              <label>-Platforms-</label>
-              <div >
-                {platformsRand.map((P) => (
-                  <div key={P}>
-                    <input
-                      type="checkbox"
-                      name="platforms"
-                      value={P}
-                    ></input>
-                  <label name={P}>{P}</label>
-                  </div>
-                ))}
-              </div>
-            </div>    
-        </div>
-          <button className="button" type="submit">
-            Create!
-          </button>
-      </div>
-    </form>
-  </div>
+            <button className={style.button} type="submit">
+              Create!
+            </button>
+          </div>
+        </form>
+    </div>
   );
 }
   

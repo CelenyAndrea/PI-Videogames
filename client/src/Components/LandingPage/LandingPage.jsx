@@ -1,19 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './landingPage.css'
+import style from './landingPage.module.css'
+//import ima from './imgbin_resident.png'
 
 function LandingPage() {
     return (
-      <div className='background'>
-        <div className='flex'>
-        <h1>Welcome to Videogames</h1>
-          <button className='enter'>
-            <Link to='/home'>
-              <span id='text'>"Discover a new world"</span>
-            </Link>
-          </button>
+      <div className={style.landingpage}>
+        <div className={style.msgContainer}>
+          <p className={style.title}>Welcome to Videogames</p>
+          <p className={style.text}>¡Discover a new world!</p>
+          <Link to='/home'>
+            <button className={style.button} type='submit'>Enter</button>
+          </Link>
         </div>
-        <h2>Individual Project - Celeny Santana</h2>
+        {/* <h2>Individual Project - Celeny Santana</h2> */}
       </div>
     );
 }

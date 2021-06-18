@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import logo from './logo.png';
+import style from './NavBar.module.css'
 
 function NavBar() {
   const [name, setName] = useState("");
@@ -11,44 +12,33 @@ function NavBar() {
   }
 
   return (
-    <div>
-
-      <div>
-        <Link to="/">
-          <h3>Videogames!</h3>
-        </Link>
-      </div>
-
-      <div>
-        <Link to="/home">
-          <h3>Home</h3>
-        </Link>
-      </div>
-
-      <div>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Search videogame..."
-            type="text">
-          </input>
-          <NavLink to={`/results/${name}`}>
-            <button name="name" type="submit"> Go! </button>
-          </NavLink>
-        </form>
-      </div>
-      
-      <div>
-        <Link to="/create">
-          <h3>Create</h3>
-        </Link>
-      </div>
-      {/* <div>
-        <Link to="/about">
-          <h3>About</h3>
-        </Link>
-      </div> */}
+    <div className={style.mainContainer}>
+      <nav className={style.navContainer}>
+        <div className={style.linkContainer}>
+          <img src={logo} className={style.logo} />
+          <Link to="/" className={style.hover}>Videogames!</Link>
+          <Link to="/home" className={style.hover}>Home</Link>
+          <Link to="/create" className={style.hover}>Create VideoGame</Link>
+          {/* <Link to="/about" className={style.hover">About</Link> */}
+        </div>
+            
+        <div>
+          <form onSubmit={(e) => handleSubmit(e)} className={style.formContainer}>
+            <div className={style.searchBarContainer}>
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Search videogame..."
+                type="text"
+                className={style.input}>
+              </input>
+              <NavLink to={`/results/${name}`} className={style.search}>
+                <button className={style.button} type="submit"> Go! </button>
+              </NavLink>
+            </div>
+          </form>
+        </div>
+      </nav>
     </div>
   );
 }

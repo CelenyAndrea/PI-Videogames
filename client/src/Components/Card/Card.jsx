@@ -1,23 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import style from './Card.module.css';
 
 function Card({data}) {
 	return (
-		<div>
+		<div className={style.card}>
 			<Link to={`/videogames/${data.id}`}>
 				{data.image === null || !data.image ?
-        			<h1>"Image not found"</h1>  
-        			: (<img src={data.image} alt={data.name} />)
+        			<i class="fa fa-spinner fa-spin fa-3x fa-fw "aria-hidden="true"></i>  
+        			: (<img className={style.img} src={data.image} alt={data.name} />)
 				}
 			</Link>
-			<div>
-				<div>
-					<div>{data.name}</div>
-					<div>{data.genres}</div>
+			<div className={style.textCard}>
+				<div className={style.nameGenres}>
+					<div className={style.name}>{data.name}</div>
+					<div className={style.genres}>{data.genres}</div>
 				</div>
-				<div>
-					<div>{data.rating}</div>
+				<div className={style.divRating}>
+					<div className={style.rating}>{data.rating}</div>
 				</div>
 			</div>
 		</div>

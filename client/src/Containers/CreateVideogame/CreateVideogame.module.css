@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.container{
+    color: #FFFFDD;
+    font-weight: 500;
+    height: 94vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    height: 500px;
+    width: 850px;
+    background-color: rgba(255, 255, 255, 0.088);
+    padding: 5px;
+    margin-bottom: 120px;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.313);
+    -webkit-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.24);
+    -moz-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.24);
+}
+
+.divTitles{
+    display: flex;
+    flex-direction: row;
+}
+
+.label{
+    width: 145px;
+    border: 1px solid b #FFFFDD;
+    border-radius: 10px;
+    background: none;
+    margin: 5px;
+    padding: 4px;
+}
+
+.label:hover{
+    cursor: pointer;
+}
+
+.checkboxs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.gendivs{
+    display: flex;
+}
+
+.checks{
+    display: flex;
+    float: left;
+}
+
+
+.checks input:hover {
+    cursor: pointer;
+}
+
+.imagediv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.imagen{
+    width: 300px;
+    border: 1px solid b #FFFFDD;
+    border-radius: 10px;
+    background: none;
+    margin: 15px;
+    padding: 5px;
+}
+
+.button {
+    color: white;
+    background-color:#00d2ad;
+    border-radius: 15px;
+    padding: 7px 0;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+.button:hover{
+    background-color:steelblue;
+    transition: all .3s;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getGenres, filterByGenre, orderByCreator, orderAsc, orderDesc } from '../../Actions/index';
-//import "./Filter.css";
+import style from "./Filter.module.css";
 
 export function Filter() {
     const dispatch = useDispatch()
@@ -37,7 +37,7 @@ export function Filter() {
   };
 
     return (
-        <div className="filter">
+        <div className={style.filter}>
             <div>
                 <div>Filter by Genre</div>
                 <select onChange={(e) => handleFilter(e)}>    

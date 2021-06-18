@@ -1,8 +1,21 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
+.App {
+  text-align: center;  
+  background-image: url('https://media.redadn.es/imagenes/bloodborne-ps4_231530_pn2.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +48,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchVideogames } from '../../Actions/index';
-import Videogames from '../Videogame/Videogame';
-import Pagination from '../Pagination/Pagination';
-//import "./Search.css";
+import Videogames from '../../Components/Videogame/Videogame';
+import Pagination from '../../Components/Pagination/Pagination';
+import style from "./Search.module.css";
 
 
 export default function Search() {
@@ -31,7 +31,7 @@ export default function Search() {
     let currentPageGames = searchVideogame.slice(firtsCardPerPage, lastCardPerPage);
   
     return (
-      <div className="search">
+      <div className={style.search}>
           {searchVideogame.length > 0 ?
           <>
             <h1>Results with {name}!</h1>

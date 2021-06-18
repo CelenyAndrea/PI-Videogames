@@ -1,0 +1,125 @@
+
+.landingpage {
+    background-image: url('https://frikigamers.com/wp-content/uploads/2018/04/conoce-los-telefonos-moviles-con-android-compatibles-con-fortnite-frikigamers.com_.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    overflow:scroll;
+    color:blanchedalmond;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 50px;
+    margin: 20px;
+    margin-bottom: 15px;
+}
+  
+.text{
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 20px;
+    margin-bottom: 15px;
+}
+
+.button {
+    color: white;
+    background-color:slateblue;
+    border-radius: 15px;
+    padding: 7px 0;
+    margin: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+.msgContainer{
+    padding-block-end:400px;
+    text-align:left;
+    line-height: 70px;
+    margin-right: 700px;
+    animation: moverDerecha 2s ease-in;
+}
+
+.button:hover{
+    background-color:steelblue;
+    transition: all .3s;
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+  .msgContainer{
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 900px){
+    
+  .msgContainer{
+    margin-right: 50px;
+  }
+}
+  
+@media screen and (max-width: 750px){
+  
+  .msgContainer{
+    margin-right: 0px;
+    margin-bottom: 220px;
+    display: flex;
+    width: 60%;
+  }
+
+  .msgContainer p {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  } 
+    
+  .title{
+    font-size: 50px;
+    margin-bottom: -20px;
+  }
+    
+  .landingpage{
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 450px){
+
+  .msgContainer{
+    margin-right: 0px;
+    margin-bottom: 220px;
+    width: 90%;
+  }
+
+  .title{
+    font-size: 50px;
+    margin-bottom: -20px;
+  }
+
+  .landingpage{
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+  }
+}

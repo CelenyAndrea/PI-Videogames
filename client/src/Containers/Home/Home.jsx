@@ -1,9 +1,10 @@
 import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideogames, resetAll } from '../../Actions/index'
-import Videogames from '../Videogame/Videogame';
-import Pagination from '../Pagination/Pagination';
+import Videogames from '../../Components/Videogame/Videogame';
+import Pagination from '../../Components/Pagination/Pagination';
 import Filter from '../Filter/Filter';
+import style from './Home.module.css';
 
 function Home() {
   const dispatch = useDispatch();
@@ -38,14 +39,18 @@ function Home() {
   let currentPageGames = allVideogames.slice(firtsCardPerPage, lastCardPerPage);
 
   return (
-    <div>
+    <div >
       <Filter paginate={paginate} />
-      <Videogames videogames={currentPageGames} />
-      <Pagination
-        videogamesPerPage={videogamesPerPage}
-        totalVideogames={allVideogames.length}
-        paginate={paginate}
-      />
+      <div className={style.home}>
+        <Videogames videogames={currentPageGames} />
+      </div>
+      <div>
+        <Pagination
+          videogamesPerPage={videogamesPerPage}
+          totalVideogames={allVideogames.length}
+          paginate={paginate}
+        />
+      </div>  
     </div>
   );
 };

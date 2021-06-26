@@ -24,7 +24,7 @@ export default function Search() {
     }
   
     const [page, setPage] = useState(1);
-    const [videogamesPerPage] = useState(10);
+    const [videogamesPerPage] = useState(15);
   
     let lastCardPerPage = page * videogamesPerPage;
     let firtsCardPerPage = lastCardPerPage - videogamesPerPage;

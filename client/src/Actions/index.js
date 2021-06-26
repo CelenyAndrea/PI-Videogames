@@ -52,14 +52,7 @@ export function getGenres() {
 
 export function createVideogame(obj) {
     return (dispatch) =>
-        axios.post('http://localhost:3001/videogame', obj)//, {
-        //     method: 'POST',
-        //     headers: {
-        //     Accept: 'application/json',
-        //     'Content-Type': 'application/json',
-        //     },
-        // body: JSON.stringify(obj),
-        // })
+        axios.post('http://localhost:3001/videogame', obj)
         .then((res) => {
           dispatch({type: CREATE_VIDEOGAME, payload: res.data});
         });

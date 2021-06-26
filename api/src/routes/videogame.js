@@ -3,7 +3,7 @@ const { Router } =require('express');
 const axios = require('axios');
 const { API_KEY } = process.env;
 const { Videogame, Genre } = require('../db');
-//const { v4: uuidv4 } = require("uuid");
+const { v4: uuidv4 } = require("uuid");
 
 const router = Router();
 
@@ -16,7 +16,6 @@ router.get('/:id', async function (req, res) {
                 { where: 
                     {id},
                     include: [Genre]
-                    // {model: Genre, attributes: ['name'], through: {attributes: []}}
                 }
             )
             let X = gameDB
@@ -59,37 +58,30 @@ router.get('/:id', async function (req, res) {
 // // Creo el videojuego en la db
 
 router.post('/', async (req, res) => {
+    console.log(req.body)
     const { name, description, image, released, rating, platforms, genres } = req.body;
   
     let platformString = platforms.join(', ')
   
-    let [gameCreated] = await Videogame.create({
-      name,
-      description,
-      image, 
-      released,
-      rating,
-      platforms: platformString
+    let gameCreated = await Videogame.create({
+        id: uuidv4(),
+        name,
+        description,
+        image, 
+        released,
+        rating,
+        platforms: platformString
     })
     console.log(gameCreated)
 
     genres.forEach(async (G) => {
         let genresGame = await Genre.findOne({ where: { name: G } })
+        //console.log(genresGame)
         await gameCreated.addGenre(genresGame)
     })
-      res.send('Videogame created successfully!')
-      
-    // let arrayGenre = req.body.genres
-    // if (!Array.isArray(arrayGenre)) {
-    //     arrayGenre = [arrayGenre]
-    // }
-    // const gameCreated = await Videogame.create(req.body)
-    // arrayGenre.map(async e => {
-    //     const genres = await Genre.findByPk(e)
-    //     await gameCreated.addGenre(genres)
-    // })
-    // res.status(201).json(gameCreated)
+    res.send('Videogame created successfully!')
+
 });
-  
+
 
 module.exports = router;

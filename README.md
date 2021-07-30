@@ -6,12 +6,12 @@
 
 ## Resultado Final
 
-[![Watch the video](https://i9.ytimg.com/vi_webp/qIvkyRwtqoQ/mqdefault.webp?v=60df85f2&sqp=COim_oYG&rs=AOn4CLBDukJQ_kUzUbWxFUM_wKk_nswvaw)](https://youtu.be/qIvkyRwtqoQ) 
+[![Watch the video](https://github.com/CelenyAndrea/CelenyAndrea/blob/main/images/videogames/Landing.png)](https://youtu.be/qIvkyRwtqoQ) 
 
 
 ## Enunciado
 
-La idea general: crear una aplicación en la cual se puedan ver los distintos videojuegos disponibles junto con información relevante de los mismos utilizando la api externa [rawg](https://rawg.io/apidocs) y a partir de ella poder, entre otras cosas:
+Idea general: crear una aplicación en la cual se puedan ver los distintos videojuegos disponibles junto con información relevante de los mismos utilizando la api externa [rawg](https://rawg.io/apidocs) y a partir de ella poder, entre otras cosas:
 
   - Buscar videjuegos
   - Filtrarlos / Ordenarlos

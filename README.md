@@ -6,7 +6,7 @@
 
 ## Resultado Final
 
-[![Watch the video](https://github.com/CelenyAndrea/CelenyAndrea/blob/main/images/videogames/Landing.png)](https://youtu.be/qIvkyRwtqoQ) 
+[![Watch the video](https://github.com/CelenyAndrea/PI-Videogames/blob/main/AppVideoGames.png)](https://youtu.be/qIvkyRwtqoQ) 
 
 
 ## Enunciado

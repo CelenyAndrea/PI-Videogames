@@ -4,7 +4,7 @@
 
 # Individual Project - Henry Videogames
 
-## Resultado Final <h3><a href='https://videogames-app-celenyandrea.vercel.app/'>🎮 Videogames App</a></h3>
+## Resultado Final <h3><a href='https://videogames-app-celenyandrea.vercel.app/'>🎮 Videogames App</a> (Deploy Backend en Heroku y Frontend en Vercel)</h3>
 
 [![Watch the video](https://github.com/CelenyAndrea/PI-Videogames/blob/main/AppVideoGames.png)](https://youtu.be/qIvkyRwtqoQ) 
 

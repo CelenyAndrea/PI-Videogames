@@ -17,6 +17,7 @@ function Home() {
   useEffect(() => {
     dispatch(resetAll());
     dispatch(getVideogames());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 // Filtrado y Ordenado

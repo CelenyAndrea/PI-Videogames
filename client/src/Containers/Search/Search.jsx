@@ -42,7 +42,7 @@ export default function Search() {
               paginate={paginate}
             />
           </>
-          : <h1></h1>
+          : <h1>Search...</h1>
           }
       </div>
     )

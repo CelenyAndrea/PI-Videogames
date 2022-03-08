@@ -22,7 +22,7 @@ function CreateVideogame() {
 
   useEffect(() => {
     dispatch(getGenres())
-  }, []);
+  });
 
   const platformsRand = ["PC", "iOS", "Android", "macOS", "PlayStation", "Xbox", "Nintendo", "Linux", "Apple", "Atari", "Genesis", "SEGA"]
 
@@ -102,7 +102,7 @@ function CreateVideogame() {
               className={style.imagen}
               type="text"
               name="image"
-              value={game.image}
+              defaultValue={game.image}
             ></input>
           </div>
           <div>
@@ -113,7 +113,7 @@ function CreateVideogame() {
                   className={style.label}
                   type="text"
                   name="name"
-                  value={game.name}
+                  defaultValue={game.name}
                 ></input>
               </div>
               <div>
@@ -122,7 +122,7 @@ function CreateVideogame() {
                   className={style.label}
                   type="date"
                   name="released"
-                  value={game.released}
+                  defaultValue={game.released}
                 ></input>
               </div>
               <div>
@@ -131,7 +131,7 @@ function CreateVideogame() {
                   className={style.label}
                   type="number"
                   name="rating"
-                  value={ game.rating}
+                  defaultValue={ game.rating}
                 ></input>
               </div>
               <div>
@@ -140,7 +140,7 @@ function CreateVideogame() {
                   className={style.label}
                   type="text"
                   name="description"
-                  value={game.description}
+                  defaultValue={game.description}
                 ></textarea>
               </div>
             </div>
@@ -154,7 +154,7 @@ function CreateVideogame() {
                         <input
                           type="checkbox"
                           name="genres"
-                          value={gen.name}
+                          defaultValue={gen.name}
                         ></input>
                         <label name={gen}>{gen.name}</label>
                       </div>
@@ -166,7 +166,7 @@ function CreateVideogame() {
                         <input
                           type="checkbox"
                           name="genres"
-                          value={gen.name}
+                          defaultValue={gen.name}
                         ></input>
                         <label name={gen}>{gen.name}</label>
                       </div>
@@ -182,7 +182,7 @@ function CreateVideogame() {
                       <input
                         type="checkbox"
                         name="platforms"
-                        value={P}
+                        defaultValue={P}
                       ></input>
                       <label name={P}>{P}</label>
                     </div>

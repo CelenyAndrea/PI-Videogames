@@ -6,7 +6,7 @@ export default function Videogames ({videogames}) {
   return (
     <div className={style.show}>
       {videogames.length > 0 ?
-          videogames.map((data) => (<Card data={data} />))
+          videogames.map((data) => (<Card key={data.id} data={data} />))
         : <img src="https://www.seprelab.com/assets/img/loader.gif" alt="Link caido"/>
       }
     </div>

@@ -9,6 +9,7 @@ export function Filter() {
     
     useEffect(() => {
         dispatch(getGenres())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     //Filtrar x genero
@@ -43,7 +44,7 @@ export function Filter() {
                 <select onChange={(e) => handleFilter(e)}>    
                 <option default>All</option>
                 {genres.map((G) => (
-                <option value={G.name}>{G.name}</option>
+                <option key={G.id} value={G.name}>{G.name}</option>
                 ))}
                 </select>
             </div>

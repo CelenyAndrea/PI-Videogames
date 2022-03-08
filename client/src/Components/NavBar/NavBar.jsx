@@ -15,7 +15,7 @@ function NavBar() {
     <div className={style.mainContainer}>
       <nav className={style.navContainer}>
         <div className={style.linkContainer}>
-          <img src={logo} className={style.logo} />
+          <img src={logo} alt='logo' className={style.logo} />
           <Link to="/" className={style.hover}>Videogames!</Link>
           <Link to="/home" className={style.hover}>Home</Link>
           <Link to="/create" className={style.hover}>Create VideoGame</Link>
